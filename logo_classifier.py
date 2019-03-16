@@ -4,14 +4,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 tf.logging.set_verbosity(tf.logging.INFO)
-
-
-# Our application logic will be added here
-
-
 def cnn_model_fn(features, labels, mode):
-    # Input Layer
-
     input_layer = tf.reshape(features["x"], [-1, 50, 50, 3])
     print(input_layer)
     input_layer = tf.cast(input_layer, dtype=tf.float32)
